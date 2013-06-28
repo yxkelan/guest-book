@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Guest Book</title>
+</head>
+<body>
+    <section id="guestapp">
+        <header id="header">
+            <h1>Guest Book</h1>
+        </header>
+        <div class="row">
+
+            <section id="panel" class="span5"> 
+                <div id="guest_input">
+                    <ul class="abs" id="input_tabs">
+                        <li class="highlight tab" data="#manual">Add Manually</li>
+                        <li class="tab" data="#contact">From Contacts</li>
+                    </ul>
+                    <textarea id="manual" class="tab-content" placeholder="Enter emails separated by commas or returns 
+ example_name<example_email@example.com>"></textarea>
+                    <div id="contact" class="tab-content none">
+                        <!--<div><input type="search"></div>-->
+                        <div class="header-row clearfix">
+                            <span class="width1 center"><input id="toggle-all" type="checkbox"></span>
+                            <span class="width2 right">Name</span>
+                            <span class="width3">Email</span>
+                        </div>
+                        <ul id="contact_list">
+                        </ul>
+                    </div>
+                </div>
+                <a id="btn-input"></a>
+            </section>
+
+            <section class="span5">
+                <div id="guest">
+                    <div class="abs guest-num">Your Guest List <span id="number">0</span></div>
+                    <div class="header-row">
+                    <span class="width4 right">Name</span>
+                    <span class="width5 right">Email</span>
+                    <span>Edit/Remove</span>
+                    </div>
+                    <ul id="guest_list">
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+<script type="text/template" id="contact_template">
+    <div class="width1 center"><input class="toggle" type="checkbox" <%= selected ? 'checked':''%> ></div>
+    <div class="width2"><%- name %></div>
+    <div class="width3"><%- email %></div>
+</script>
+
+<script type="text/template" id="guest_template">
+    <div class="width4">
+        <label><%- name %></label>
+        <% if (editable) { %>
+            <input type="text" class="edit name" value="<%= name %>" >
+        <% } %>
+    </div>
+    <div class="width5">
+        <label><%- email %></label>
+        <% if (editable) { %>
+            <input type="text" class="edit email" value="<%= email%>" >
+        <% } %>
+    </div>
+    <div class="width6 center">
+    <% if (editable) { %>
+        <a class="btn-edit">Edit</a>
+    <% } %>
+        <a class="btn-del">&#215;</a>
+    </div>
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/backbone-min.js"></script>
+<script type="text/javascript" src="js/backbone.localStorage.js"></script>
+
+<script type="text/javascript" src="js/guest.js"></script>
+
+</body>
+</html>

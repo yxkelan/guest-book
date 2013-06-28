@@ -1,0 +1,236 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background: #eaeaea url('bg.png');
+    width: 943px;
+    margin: 0 auto;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.center{
+    text-align: center;
+}
+
+#guestapp{
+    background: white;
+    padding: 30px;
+}
+
+#panel{
+    position: relative;
+    margin-right: 102px;
+}
+
+#guest_input, 
+#guest{
+    margin-top:50px;
+    border: 3px solid #A7A9AC;
+    padding: 10px;
+    height: 230px;
+    position: relative;
+}
+
+#btn-input{
+    position: absolute;
+    display: block;
+    width: 60px;
+    background-color: #08c;
+    height: 20px;
+    left: 398px;
+    top: 160px;
+}
+
+#btn-input:after {
+    content: "";
+    height: 0;
+    width: 0;
+    left: -4px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid;
+    position: absolute;
+    left: 59px;
+    top: -10px;
+}
+
+#btn-input:hover{
+    background-color:  #005580;
+}
+
+
+.none{
+    display: none;
+}
+
+.header-row{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #A7A9AC;
+
+}
+
+.abs{
+    position: absolute;
+    top: -40px;
+}
+
+#input_tabs {
+    margin: 0;
+    padding: 0;
+    margin-left: -47px;
+    position: absolute;
+    top: -40px;
+}
+#input_tabs li{
+    list-style: none;
+    float: left;
+    padding: 5px;
+    background-color: #a7a9ac;
+    color: white;
+    width: 160px;
+    text-align: center;
+    margin-left: 35px;
+
+}
+
+#input_tabs li:hover{
+    background-color: #00689A;
+}
+
+#input_tabs li.highlight{
+    background-color: #00689A;
+}
+
+
+/*#contact .header-row{
+    border-top: 3px solid #A7A9AC;
+    padding-top: 5px;
+}*/
+
+
+#contact_list{
+    margin: 0;
+    padding: 0;
+}
+
+#contact_list li{
+    padding: 5px 0px;
+}
+
+.guest-num{
+    font-size: 16px;
+    color: #58595B;
+    font-weight: bold;
+    margin-left: -17px;
+}
+
+#number{
+    padding: 0px 12px;
+    text-align: center;
+    background: #8DC63F;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+#manual{
+    border: none;
+    height: 96%;
+    width: 96%;
+    resize: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+[class*="width"]{
+    float:left;
+    margin-right: 2px;
+    min-height: 1px;
+}
+
+.right{
+    border-right: 3px solid #A7A9AC;
+}
+
+.width1{
+    width: 10%;
+}
+
+.width2{
+    width: 37%;
+}
+
+.width3{
+    width: 50%;
+}
+
+.width4{
+    width: 27%;
+}
+
+.width5{
+    width: 44%;
+}
+
+.width6{
+    width: 25%;
+}
+
+#guest_list{
+    height: 215px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#guest_list li{
+    margin: 5px 0px;
+}
+
+#guest_list label{
+    word-break: break-all;
+}
+
+#guest_list li .edit{
+    display: none;
+}
+
+#guest_list li.editing .edit{
+    display: block;
+}
+
+#guest_list li.editing label{
+    display: none;
+}
+
+input.name{
+    width: 80%; 
+}
+
+input.email{
+    width: 92%;
+}
+
+input[type="text"]{
+    height: 14px;
+    margin-bottom: 0px;
+}
